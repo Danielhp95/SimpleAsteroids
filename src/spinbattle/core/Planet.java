@@ -91,9 +91,29 @@ public class Planet {
             }
         }
         rotation += rotationRate;
+        //movePlanet(params);
         return this;
     }
 
+    /*public Planet movePlanet(SpinBattleParams p) {
+    	Vector2d adjustPosition = new Vector2d(p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1), p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1));
+    	position = position.add(adjustPosition);
+    	if (position.x >= p.width) {
+    		position.x = 1;
+    	}
+    	if (position.x <= 0) {
+    		position.x = p.width - 1;
+    	}
+    	if (position.y >= p.height) {
+    		position.y = 1;
+    	}
+    	if (position.y <= 0) {
+    		position.y = p.height - 1;
+    	}
+    	return this;
+    }*/
+    
+    
     public Planet setParams(SpinBattleParams params) {
         this.params = params;
         if (transit != null) {

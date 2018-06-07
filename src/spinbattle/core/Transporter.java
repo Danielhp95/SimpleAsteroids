@@ -51,7 +51,7 @@ public class Transporter {
             if (trajectory != null)
                 trajectory.addPoint(mo.s.copy());
             if (!params.inBounds(mo.s)) {
-                outOfBoundsTermination();
+                wrapPosition();
             }
             payload -= params.transportTax;
         }
@@ -73,6 +73,24 @@ public class Transporter {
         // System.out.println("Out of bounds");
         terminateJourney();
         return this;
+    }
+
+    public void wrapPosition() {
+        double newX = mo.s.x;
+        double newY = mo.s.y;
+        // wrapping on x coordinate?
+        if (mo.s.x < 0) {
+            newX = params.width;
+        } else if (mo.s.x >= params.width) {
+            newX = 0;
+        }
+        if (mo.s.y < 0) {
+            newY = params.height;
+        } else if (mo.s.y >= params.height) {
+            newY = 0;
+        }
+        // wrapping on x coordinate?
+        mo.s = new Vector2d(newX, newY);
     }
 
     public Transporter setParent(int parent) {
