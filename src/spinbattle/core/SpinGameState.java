@@ -118,6 +118,10 @@ public class SpinGameState implements AbstractGameState {
     public boolean isTerminal() {
         return nTicks > params.maxTicks || singleOwner() != null;
     }
+    
+    public boolean gameOver() {
+    	return singleOwner() != null;
+    }
 
     // if only one player owns planets then the game is over
     public Integer singleOwner() {
