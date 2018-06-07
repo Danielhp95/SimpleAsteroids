@@ -9,7 +9,7 @@
         <field name="height" type="int" value="400" />
         <field name="maxTicks" type="int" value="100" />
         <field name="nPlanets" type="int" value="20" />
-        <field name="nNeutral" type="int" value="16" />
+        <field name="nToAllocate" type="int" value="4" />
         <field name="minGrowth" type="double" value="0.05" />
         <field name="maxGrowth" type="double" value="0.15" />
         <field name="spinRatio" type="double" value="0.4" />
@@ -21,6 +21,7 @@
         <field name="useProximityMap" type="boolean" value="false" />
         <field name="useVectorField" type="boolean" value="false" />
         <field name="transportTax" type="double" value="0.0" />
+        <field name="radSep" type="double" value="1.5" />
         <field name="gravitationalFieldConstant" type="double" value="1.2" />
         <field name="gravitationalForceConstant" type="double" value="0.001" />
         <field name="random">
@@ -71,15 +72,15 @@
             <object type="spinbattle.core.Planet" id="10">
               <field name="position">
                 <object type="math.Vector2d" id="11">
-                  <field name="x" type="double" value="554.20865145194" />
-                  <field name="y" type="double" value="229.2899167627724" />
+                  <field name="x" type="double" value="134.78040834706385" />
+                  <field name="y" type="double" value="339.8597309052882" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.02856409787152723" />
+              <field name="rotationRate" type="double" value="0.03194133040282471" />
               <field name="index" type="int" value="0" />
               <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="18.0" />
+              <field name="shipCount" type="double" value="16.0" />
               <field name="ownedBy" type="int" value="0" />
               <field name="params">
                 <object idref="2" />
@@ -91,12 +92,12 @@
             <object type="spinbattle.core.Planet" id="12">
               <field name="position">
                 <object type="math.Vector2d" id="13">
-                  <field name="x" type="double" value="254.0144977456397" />
-                  <field name="y" type="double" value="285.1611148835006" />
+                  <field name="x" type="double" value="505.76555955111627" />
+                  <field name="y" type="double" value="67.08970336081816" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.030210316785361617" />
+              <field name="rotationRate" type="double" value="-0.02915596671839162" />
               <field name="index" type="int" value="1" />
               <field name="growthRate" type="double" value="0.15" />
               <field name="shipCount" type="double" value="17.0" />
@@ -111,15 +112,15 @@
             <object type="spinbattle.core.Planet" id="14">
               <field name="position">
                 <object type="math.Vector2d" id="15">
-                  <field name="x" type="double" value="84.60072166896346" />
-                  <field name="y" type="double" value="301.59791189264655" />
+                  <field name="x" type="double" value="258.32458277932597" />
+                  <field name="y" type="double" value="92.68392023217875" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.025328068016210986" />
+              <field name="rotationRate" type="double" value="0.03653013471873036" />
               <field name="index" type="int" value="2" />
               <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="6.0" />
+              <field name="shipCount" type="double" value="19.0" />
               <field name="ownedBy" type="int" value="0" />
               <field name="params">
                 <object idref="2" />
@@ -131,15 +132,15 @@
             <object type="spinbattle.core.Planet" id="16">
               <field name="position">
                 <object type="math.Vector2d" id="17">
-                  <field name="x" type="double" value="405.43230629566" />
-                  <field name="y" type="double" value="319.3769643565148" />
+                  <field name="x" type="double" value="601.3330845235569" />
+                  <field name="y" type="double" value="324.6842576467053" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03944002649850842" />
+              <field name="rotationRate" type="double" value="-0.046656861152567654" />
               <field name="index" type="int" value="3" />
               <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="11.0" />
+              <field name="shipCount" type="double" value="16.0" />
               <field name="ownedBy" type="int" value="1" />
               <field name="params">
                 <object idref="2" />
@@ -151,15 +152,15 @@
             <object type="spinbattle.core.Planet" id="18">
               <field name="position">
                 <object type="math.Vector2d" id="19">
-                  <field name="x" type="double" value="112.65924915153028" />
-                  <field name="y" type="double" value="147.26270198206697" />
+                  <field name="x" type="double" value="270.85930877874586" />
+                  <field name="y" type="double" value="178.43372764529443" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.03723620284904673" />
+              <field name="rotationRate" type="double" value="-0.04331173708522214" />
               <field name="index" type="int" value="4" />
-              <field name="growthRate" type="double" value="0.05939353728945206" />
-              <field name="shipCount" type="double" value="13.0" />
+              <field name="growthRate" type="double" value="0.07484417146695192" />
+              <field name="shipCount" type="double" value="9.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -171,14 +172,14 @@
             <object type="spinbattle.core.Planet" id="20">
               <field name="position">
                 <object type="math.Vector2d" id="21">
-                  <field name="x" type="double" value="524.3302858778451" />
-                  <field name="y" type="double" value="341.186712117539" />
+                  <field name="x" type="double" value="452.9936890260092" />
+                  <field name="y" type="double" value="359.9669833634266" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04007171649267571" />
+              <field name="rotationRate" type="double" value="-0.0295119200009715" />
               <field name="index" type="int" value="5" />
-              <field name="growthRate" type="double" value="0.053158300084502445" />
+              <field name="growthRate" type="double" value="0.06837201551783592" />
               <field name="shipCount" type="double" value="17.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
@@ -191,15 +192,15 @@
             <object type="spinbattle.core.Planet" id="22">
               <field name="position">
                 <object type="math.Vector2d" id="23">
-                  <field name="x" type="double" value="594.6001170031866" />
-                  <field name="y" type="double" value="108.59262025383538" />
+                  <field name="x" type="double" value="578.0727926967626" />
+                  <field name="y" type="double" value="208.66167512364365" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04100545994838013" />
+              <field name="rotationRate" type="double" value="0.04367841209331009" />
               <field name="index" type="int" value="6" />
-              <field name="growthRate" type="double" value="0.09268589212315773" />
-              <field name="shipCount" type="double" value="15.0" />
+              <field name="growthRate" type="double" value="0.10568852972269446" />
+              <field name="shipCount" type="double" value="19.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -211,15 +212,15 @@
             <object type="spinbattle.core.Planet" id="24">
               <field name="position">
                 <object type="math.Vector2d" id="25">
-                  <field name="x" type="double" value="431.54935936088833" />
-                  <field name="y" type="double" value="179.9372575479293" />
+                  <field name="x" type="double" value="677.2894466153045" />
+                  <field name="y" type="double" value="296.0783831020084" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04421598886429537" />
+              <field name="rotationRate" type="double" value="-0.050094494331057754" />
               <field name="index" type="int" value="7" />
-              <field name="growthRate" type="double" value="0.05140629917622213" />
-              <field name="shipCount" type="double" value="12.0" />
+              <field name="growthRate" type="double" value="0.06181503300859975" />
+              <field name="shipCount" type="double" value="6.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -231,15 +232,15 @@
             <object type="spinbattle.core.Planet" id="26">
               <field name="position">
                 <object type="math.Vector2d" id="27">
-                  <field name="x" type="double" value="597.600876676079" />
-                  <field name="y" type="double" value="339.4183373802672" />
+                  <field name="x" type="double" value="42.08022176579267" />
+                  <field name="y" type="double" value="216.0021698891334" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.034340614257883595" />
+              <field name="rotationRate" type="double" value="-0.03983651870074544" />
               <field name="index" type="int" value="8" />
-              <field name="growthRate" type="double" value="0.0594629806234026" />
-              <field name="shipCount" type="double" value="19.0" />
+              <field name="growthRate" type="double" value="0.06829185663980428" />
+              <field name="shipCount" type="double" value="5.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -251,15 +252,15 @@
             <object type="spinbattle.core.Planet" id="28">
               <field name="position">
                 <object type="math.Vector2d" id="29">
-                  <field name="x" type="double" value="224.14028188579803" />
-                  <field name="y" type="double" value="152.38814742235468" />
+                  <field name="x" type="double" value="617.8300768473676" />
+                  <field name="y" type="double" value="119.60580014095545" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.025431878847668534" />
+              <field name="rotationRate" type="double" value="0.042646974956171896" />
               <field name="index" type="int" value="9" />
-              <field name="growthRate" type="double" value="0.12650774596005404" />
-              <field name="shipCount" type="double" value="17.0" />
+              <field name="growthRate" type="double" value="0.0949544586540528" />
+              <field name="shipCount" type="double" value="11.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -271,15 +272,15 @@
             <object type="spinbattle.core.Planet" id="30">
               <field name="position">
                 <object type="math.Vector2d" id="31">
-                  <field name="x" type="double" value="89.53849582112124" />
-                  <field name="y" type="double" value="61.08841663438884" />
+                  <field name="x" type="double" value="128.84022588841228" />
+                  <field name="y" type="double" value="182.35759650071466" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03452990075909579" />
+              <field name="rotationRate" type="double" value="0.027277753539046837" />
               <field name="index" type="int" value="10" />
-              <field name="growthRate" type="double" value="0.06194803678890625" />
-              <field name="shipCount" type="double" value="6.0" />
+              <field name="growthRate" type="double" value="0.06995605211006299" />
+              <field name="shipCount" type="double" value="11.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -291,15 +292,15 @@
             <object type="spinbattle.core.Planet" id="32">
               <field name="position">
                 <object type="math.Vector2d" id="33">
-                  <field name="x" type="double" value="376.606294666922" />
-                  <field name="y" type="double" value="155.21072424542126" />
+                  <field name="x" type="double" value="629.0875383774761" />
+                  <field name="y" type="double" value="40.96154867664086" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03301822031649544" />
+              <field name="rotationRate" type="double" value="0.036045819623568495" />
               <field name="index" type="int" value="11" />
-              <field name="growthRate" type="double" value="0.07555420427208327" />
-              <field name="shipCount" type="double" value="12.0" />
+              <field name="growthRate" type="double" value="0.07641105808725823" />
+              <field name="shipCount" type="double" value="10.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -311,15 +312,15 @@
             <object type="spinbattle.core.Planet" id="34">
               <field name="position">
                 <object type="math.Vector2d" id="35">
-                  <field name="x" type="double" value="493.1433429454037" />
-                  <field name="y" type="double" value="118.74759259609178" />
+                  <field name="x" type="double" value="450.9490113711562" />
+                  <field name="y" type="double" value="265.78839953611913" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04218562081036649" />
+              <field name="rotationRate" type="double" value="-0.039059032299918264" />
               <field name="index" type="int" value="12" />
-              <field name="growthRate" type="double" value="0.09416728182829423" />
-              <field name="shipCount" type="double" value="9.0" />
+              <field name="growthRate" type="double" value="0.0795422143908058" />
+              <field name="shipCount" type="double" value="12.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -331,15 +332,15 @@
             <object type="spinbattle.core.Planet" id="36">
               <field name="position">
                 <object type="math.Vector2d" id="37">
-                  <field name="x" type="double" value="148.13609107412123" />
-                  <field name="y" type="double" value="50.073028207175206" />
+                  <field name="x" type="double" value="358.6552342661249" />
+                  <field name="y" type="double" value="222.16185602280524" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04562923161040517" />
+              <field name="rotationRate" type="double" value="-0.03556302547646455" />
               <field name="index" type="int" value="13" />
-              <field name="growthRate" type="double" value="0.05782728985129948" />
-              <field name="shipCount" type="double" value="11.0" />
+              <field name="growthRate" type="double" value="0.10249689278548829" />
+              <field name="shipCount" type="double" value="12.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -351,15 +352,15 @@
             <object type="spinbattle.core.Planet" id="38">
               <field name="position">
                 <object type="math.Vector2d" id="39">
-                  <field name="x" type="double" value="25.55747578633679" />
-                  <field name="y" type="double" value="42.972482050014406" />
+                  <field name="x" type="double" value="476.5717773157743" />
+                  <field name="y" type="double" value="193.83304055383596" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.0331515246459294" />
+              <field name="rotationRate" type="double" value="0.03163467216029312" />
               <field name="index" type="int" value="14" />
-              <field name="growthRate" type="double" value="0.05059750585428307" />
-              <field name="shipCount" type="double" value="8.0" />
+              <field name="growthRate" type="double" value="0.08858490143844179" />
+              <field name="shipCount" type="double" value="13.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -371,15 +372,95 @@
             <object type="spinbattle.core.Planet" id="40">
               <field name="position">
                 <object type="math.Vector2d" id="41">
-                  <field name="x" type="double" value="657.0178239005737" />
-                  <field name="y" type="double" value="222.5016097035566" />
+                  <field name="x" type="double" value="186.39900685374596" />
+                  <field name="y" type="double" value="179.766187795425" />
                 </object>
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04201580771443262" />
+              <field name="rotationRate" type="double" value="-0.027419114080621813" />
               <field name="index" type="int" value="15" />
-              <field name="growthRate" type="double" value="0.055050126861374796" />
-              <field name="shipCount" type="double" value="5.0" />
+              <field name="growthRate" type="double" value="0.08030064618886287" />
+              <field name="shipCount" type="double" value="18.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="2" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="42">
+              <field name="position">
+                <object type="math.Vector2d" id="43">
+                  <field name="x" type="double" value="226.7367579736038" />
+                  <field name="y" type="double" value="257.8939240903638" />
+                </object>
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.04250672157276631" />
+              <field name="index" type="int" value="16" />
+              <field name="growthRate" type="double" value="0.06504691795442566" />
+              <field name="shipCount" type="double" value="17.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="2" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="44">
+              <field name="position">
+                <object type="math.Vector2d" id="45">
+                  <field name="x" type="double" value="395.13921955378385" />
+                  <field name="y" type="double" value="99.30812953093033" />
+                </object>
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.043696107755883354" />
+              <field name="index" type="int" value="17" />
+              <field name="growthRate" type="double" value="0.07368906894347606" />
+              <field name="shipCount" type="double" value="6.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="2" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="46">
+              <field name="position">
+                <object type="math.Vector2d" id="47">
+                  <field name="x" type="double" value="173.3330794066301" />
+                  <field name="y" type="double" value="102.73698099784498" />
+                </object>
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.0428677173972803" />
+              <field name="index" type="int" value="18" />
+              <field name="growthRate" type="double" value="0.07827875981649354" />
+              <field name="shipCount" type="double" value="13.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="2" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="48">
+              <field name="position">
+                <object type="math.Vector2d" id="49">
+                  <field name="x" type="double" value="137.30619273222936" />
+                  <field name="y" type="double" value="46.052271751188286" />
+                </object>
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.033199031366776245" />
+              <field name="index" type="int" value="19" />
+              <field name="growthRate" type="double" value="0.100659868929487" />
+              <field name="shipCount" type="double" value="10.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
                 <object idref="2" />
@@ -390,14 +471,10 @@
             </object>
             <object />
             <object />
-            <object />
-            <object />
-            <object />
-            <object />
           </array>
         </field>
-        <field name="size" type="int" value="16" />
-        <field name="modCount" type="int" value="16" />
+        <field name="size" type="int" value="20" />
+        <field name="modCount" type="int" value="20" />
       </object>
     </field>
     <field name="proximityMap">
@@ -411,24 +488,24 @@
     </field>
     <field name="nPlayers" type="int" value="2" />
     <field name="actuators">
-      <array type="spinbattle.actuator.Actuator" length="2" id="42">
+      <array type="spinbattle.actuator.Actuator" length="2" id="50">
         <object />
         <object />
       </array>
     </field>
     <field name="maxTries" type="int" value="200" />
   </object>
-  <object type="spinbattle.core.SpinGameState" id="43">
+  <object type="spinbattle.core.SpinGameState" id="51">
     <field name="totalTicks" type="int" value="0" />
     <field name="totalInstances" type="int" value="2" />
     <field name="nTicks" type="int" value="0" />
     <field name="params">
-      <object type="spinbattle.params.SpinBattleParams" id="44">
+      <object type="spinbattle.params.SpinBattleParams" id="52">
         <field name="width" type="int" value="700" />
         <field name="height" type="int" value="400" />
         <field name="maxTicks" type="int" value="100" />
         <field name="nPlanets" type="int" value="20" />
-        <field name="nNeutral" type="int" value="16" />
+        <field name="nToAllocate" type="int" value="4" />
         <field name="minGrowth" type="double" value="0.05" />
         <field name="maxGrowth" type="double" value="0.15" />
         <field name="spinRatio" type="double" value="0.4" />
@@ -440,6 +517,7 @@
         <field name="useProximityMap" type="boolean" value="false" />
         <field name="useVectorField" type="boolean" value="false" />
         <field name="transportTax" type="double" value="0.0" />
+        <field name="radSep" type="double" value="1.5" />
         <field name="gravitationalFieldConstant" type="double" value="0.0" />
         <field name="gravitationalForceConstant" type="double" value="0.001" />
         <field name="random">
@@ -454,157 +532,21 @@
       </object>
     </field>
     <field name="planets">
-      <object type="java.util.ArrayList" id="45">
+      <object type="java.util.ArrayList" id="53">
         <field name="elementData">
-          <array type="java.lang.Object" length="22" id="46">
-            <object type="spinbattle.core.Planet" id="47">
+          <array type="java.lang.Object" length="22" id="54">
+            <object type="spinbattle.core.Planet" id="55">
               <field name="position">
                 <object idref="11" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.02856409787152723" />
+              <field name="rotationRate" type="double" value="0.03194133040282471" />
               <field name="index" type="int" value="0" />
               <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="18.0" />
+              <field name="shipCount" type="double" value="16.0" />
               <field name="ownedBy" type="int" value="0" />
               <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="48">
-              <field name="position">
-                <object idref="13" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.030210316785361617" />
-              <field name="index" type="int" value="1" />
-              <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="17.0" />
-              <field name="ownedBy" type="int" value="1" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="49">
-              <field name="position">
-                <object idref="15" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.025328068016210986" />
-              <field name="index" type="int" value="2" />
-              <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="6.0" />
-              <field name="ownedBy" type="int" value="0" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="50">
-              <field name="position">
-                <object idref="17" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03944002649850842" />
-              <field name="index" type="int" value="3" />
-              <field name="growthRate" type="double" value="0.15" />
-              <field name="shipCount" type="double" value="11.0" />
-              <field name="ownedBy" type="int" value="1" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="51">
-              <field name="position">
-                <object idref="19" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.03723620284904673" />
-              <field name="index" type="int" value="4" />
-              <field name="growthRate" type="double" value="0.05939353728945206" />
-              <field name="shipCount" type="double" value="13.0" />
-              <field name="ownedBy" type="int" value="2" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="52">
-              <field name="position">
-                <object idref="21" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04007171649267571" />
-              <field name="index" type="int" value="5" />
-              <field name="growthRate" type="double" value="0.053158300084502445" />
-              <field name="shipCount" type="double" value="17.0" />
-              <field name="ownedBy" type="int" value="2" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="53">
-              <field name="position">
-                <object idref="23" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04100545994838013" />
-              <field name="index" type="int" value="6" />
-              <field name="growthRate" type="double" value="0.09268589212315773" />
-              <field name="shipCount" type="double" value="15.0" />
-              <field name="ownedBy" type="int" value="2" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="54">
-              <field name="position">
-                <object idref="25" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04421598886429537" />
-              <field name="index" type="int" value="7" />
-              <field name="growthRate" type="double" value="0.05140629917622213" />
-              <field name="shipCount" type="double" value="12.0" />
-              <field name="ownedBy" type="int" value="2" />
-              <field name="params">
-                <object idref="44" />
-              </field>
-              <field name="transit">
-                <object />
-              </field>
-            </object>
-            <object type="spinbattle.core.Planet" id="55">
-              <field name="position">
-                <object idref="27" />
-              </field>
-              <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.034340614257883595" />
-              <field name="index" type="int" value="8" />
-              <field name="growthRate" type="double" value="0.0594629806234026" />
-              <field name="shipCount" type="double" value="19.0" />
-              <field name="ownedBy" type="int" value="2" />
-              <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -612,16 +554,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="56">
               <field name="position">
-                <object idref="29" />
+                <object idref="13" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.025431878847668534" />
-              <field name="index" type="int" value="9" />
-              <field name="growthRate" type="double" value="0.12650774596005404" />
+              <field name="rotationRate" type="double" value="-0.02915596671839162" />
+              <field name="index" type="int" value="1" />
+              <field name="growthRate" type="double" value="0.15" />
               <field name="shipCount" type="double" value="17.0" />
-              <field name="ownedBy" type="int" value="2" />
+              <field name="ownedBy" type="int" value="1" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -629,16 +571,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="57">
               <field name="position">
-                <object idref="31" />
+                <object idref="15" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03452990075909579" />
-              <field name="index" type="int" value="10" />
-              <field name="growthRate" type="double" value="0.06194803678890625" />
-              <field name="shipCount" type="double" value="6.0" />
-              <field name="ownedBy" type="int" value="2" />
+              <field name="rotationRate" type="double" value="0.03653013471873036" />
+              <field name="index" type="int" value="2" />
+              <field name="growthRate" type="double" value="0.15" />
+              <field name="shipCount" type="double" value="19.0" />
+              <field name="ownedBy" type="int" value="0" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -646,16 +588,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="58">
               <field name="position">
-                <object idref="33" />
+                <object idref="17" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.03301822031649544" />
-              <field name="index" type="int" value="11" />
-              <field name="growthRate" type="double" value="0.07555420427208327" />
-              <field name="shipCount" type="double" value="12.0" />
-              <field name="ownedBy" type="int" value="2" />
+              <field name="rotationRate" type="double" value="-0.046656861152567654" />
+              <field name="index" type="int" value="3" />
+              <field name="growthRate" type="double" value="0.15" />
+              <field name="shipCount" type="double" value="16.0" />
+              <field name="ownedBy" type="int" value="1" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -663,16 +605,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="59">
               <field name="position">
-                <object idref="35" />
+                <object idref="19" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="-0.04218562081036649" />
-              <field name="index" type="int" value="12" />
-              <field name="growthRate" type="double" value="0.09416728182829423" />
+              <field name="rotationRate" type="double" value="-0.04331173708522214" />
+              <field name="index" type="int" value="4" />
+              <field name="growthRate" type="double" value="0.07484417146695192" />
               <field name="shipCount" type="double" value="9.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -680,16 +622,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="60">
               <field name="position">
-                <object idref="37" />
+                <object idref="21" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04562923161040517" />
-              <field name="index" type="int" value="13" />
-              <field name="growthRate" type="double" value="0.05782728985129948" />
-              <field name="shipCount" type="double" value="11.0" />
+              <field name="rotationRate" type="double" value="-0.0295119200009715" />
+              <field name="index" type="int" value="5" />
+              <field name="growthRate" type="double" value="0.06837201551783592" />
+              <field name="shipCount" type="double" value="17.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -697,16 +639,16 @@
             </object>
             <object type="spinbattle.core.Planet" id="61">
               <field name="position">
-                <object idref="39" />
+                <object idref="23" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.0331515246459294" />
-              <field name="index" type="int" value="14" />
-              <field name="growthRate" type="double" value="0.05059750585428307" />
-              <field name="shipCount" type="double" value="8.0" />
+              <field name="rotationRate" type="double" value="0.04367841209331009" />
+              <field name="index" type="int" value="6" />
+              <field name="growthRate" type="double" value="0.10568852972269446" />
+              <field name="shipCount" type="double" value="19.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -714,16 +656,220 @@
             </object>
             <object type="spinbattle.core.Planet" id="62">
               <field name="position">
-                <object idref="41" />
+                <object idref="25" />
               </field>
               <field name="rotation" type="double" value="0.0" />
-              <field name="rotationRate" type="double" value="0.04201580771443262" />
-              <field name="index" type="int" value="15" />
-              <field name="growthRate" type="double" value="0.055050126861374796" />
+              <field name="rotationRate" type="double" value="-0.050094494331057754" />
+              <field name="index" type="int" value="7" />
+              <field name="growthRate" type="double" value="0.06181503300859975" />
+              <field name="shipCount" type="double" value="6.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="63">
+              <field name="position">
+                <object idref="27" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.03983651870074544" />
+              <field name="index" type="int" value="8" />
+              <field name="growthRate" type="double" value="0.06829185663980428" />
               <field name="shipCount" type="double" value="5.0" />
               <field name="ownedBy" type="int" value="2" />
               <field name="params">
-                <object idref="44" />
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="64">
+              <field name="position">
+                <object idref="29" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.042646974956171896" />
+              <field name="index" type="int" value="9" />
+              <field name="growthRate" type="double" value="0.0949544586540528" />
+              <field name="shipCount" type="double" value="11.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="65">
+              <field name="position">
+                <object idref="31" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.027277753539046837" />
+              <field name="index" type="int" value="10" />
+              <field name="growthRate" type="double" value="0.06995605211006299" />
+              <field name="shipCount" type="double" value="11.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="66">
+              <field name="position">
+                <object idref="33" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.036045819623568495" />
+              <field name="index" type="int" value="11" />
+              <field name="growthRate" type="double" value="0.07641105808725823" />
+              <field name="shipCount" type="double" value="10.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="67">
+              <field name="position">
+                <object idref="35" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.039059032299918264" />
+              <field name="index" type="int" value="12" />
+              <field name="growthRate" type="double" value="0.0795422143908058" />
+              <field name="shipCount" type="double" value="12.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="68">
+              <field name="position">
+                <object idref="37" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.03556302547646455" />
+              <field name="index" type="int" value="13" />
+              <field name="growthRate" type="double" value="0.10249689278548829" />
+              <field name="shipCount" type="double" value="12.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="69">
+              <field name="position">
+                <object idref="39" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.03163467216029312" />
+              <field name="index" type="int" value="14" />
+              <field name="growthRate" type="double" value="0.08858490143844179" />
+              <field name="shipCount" type="double" value="13.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="70">
+              <field name="position">
+                <object idref="41" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.027419114080621813" />
+              <field name="index" type="int" value="15" />
+              <field name="growthRate" type="double" value="0.08030064618886287" />
+              <field name="shipCount" type="double" value="18.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="71">
+              <field name="position">
+                <object idref="43" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.04250672157276631" />
+              <field name="index" type="int" value="16" />
+              <field name="growthRate" type="double" value="0.06504691795442566" />
+              <field name="shipCount" type="double" value="17.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="72">
+              <field name="position">
+                <object idref="45" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.043696107755883354" />
+              <field name="index" type="int" value="17" />
+              <field name="growthRate" type="double" value="0.07368906894347606" />
+              <field name="shipCount" type="double" value="6.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="73">
+              <field name="position">
+                <object idref="47" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="0.0428677173972803" />
+              <field name="index" type="int" value="18" />
+              <field name="growthRate" type="double" value="0.07827875981649354" />
+              <field name="shipCount" type="double" value="13.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
+              </field>
+              <field name="transit">
+                <object />
+              </field>
+            </object>
+            <object type="spinbattle.core.Planet" id="74">
+              <field name="position">
+                <object idref="49" />
+              </field>
+              <field name="rotation" type="double" value="0.0" />
+              <field name="rotationRate" type="double" value="-0.033199031366776245" />
+              <field name="index" type="int" value="19" />
+              <field name="growthRate" type="double" value="0.100659868929487" />
+              <field name="shipCount" type="double" value="10.0" />
+              <field name="ownedBy" type="int" value="2" />
+              <field name="params">
+                <object idref="52" />
               </field>
               <field name="transit">
                 <object />
@@ -731,14 +877,10 @@
             </object>
             <object />
             <object />
-            <object />
-            <object />
-            <object />
-            <object />
           </array>
         </field>
-        <field name="size" type="int" value="16" />
-        <field name="modCount" type="int" value="16" />
+        <field name="size" type="int" value="20" />
+        <field name="modCount" type="int" value="20" />
       </object>
     </field>
     <field name="proximityMap">
@@ -752,7 +894,7 @@
     </field>
     <field name="nPlayers" type="int" value="2" />
     <field name="actuators">
-      <array type="spinbattle.actuator.Actuator" length="2" id="63">
+      <array type="spinbattle.actuator.Actuator" length="2" id="75">
         <object />
         <object />
       </array>
