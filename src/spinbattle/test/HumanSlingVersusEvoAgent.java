@@ -32,8 +32,8 @@ public class HumanSlingVersusEvoAgent {
         params.gravitationalFieldConstant *= 1;
         params.transitSpeed *= 1;
         SpinGameState gameState = new SpinGameState().setParams(params).setPlanets();
+        gameState.actuators[0] = new SourceTargetActuator().setPlayerId(0);
         gameState.actuators[1] = new SourceTargetActuator().setPlayerId(1);
-
         BasicLogger basicLogger = new BasicLogger();
         gameState.setLogger(new DefaultLogger());
         SpinBattleView view = new SpinBattleView().setParams(params).setGameState(gameState);
@@ -57,12 +57,11 @@ public class HumanSlingVersusEvoAgent {
         int[] actions = new int[2];
 
 
-        for (int i=0; i<=5000 && !gameState.isTerminal(); i++) {
+        for (int i=0; i<=10000 && !gameState.isTerminal(); i++) {
             int action_1 = mctsAgent1.getAction(gameState.copy(), 1);
             int action_2 = mctsAgent2.getAction(gameState.copy(), 2);
             System.out.println("P1: " + action_1 + "\tP2: " + action_2);
             actions[0] = action_1;
-            gameState.next(actions);
             actions[1] = action_2;
             gameState.next(actions);
             // mouseSlingController.update();
