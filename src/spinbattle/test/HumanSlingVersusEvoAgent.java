@@ -1,9 +1,12 @@
 package spinbattle.test;
 
 import agents.evo.EvoAgent;
+import core.player.AbstractMultiPlayer;
 import ggi.agents.EvoAgentFactory;
 import ggi.core.SimplePlayerInterface;
+import gvglink.SpinBattleLinkState;
 import logger.sample.DefaultLogger;
+import planetwar.GVGAIWrapper;
 import spinbattle.actuator.SourceTargetActuator;
 import spinbattle.core.FalseModelAdapter;
 import spinbattle.core.SpinGameState;
@@ -13,6 +16,7 @@ import spinbattle.params.SpinBattleParams;
 import spinbattle.players.HeuristicLauncher;
 import spinbattle.ui.MouseSlingController;
 import spinbattle.view.SpinBattleView;
+import tools.ElapsedCpuTimer;
 import utilities.JEasyFrame;
 
 import java.util.Random;
@@ -36,23 +40,32 @@ public class HumanSlingVersusEvoAgent {
         String title = "Spin Battle Game" ;
         JEasyFrame frame = new JEasyFrame(view, title + ": Waiting for Graphics");
         frame.setLocation(400, 100);
-        MouseSlingController mouseSlingController = new MouseSlingController();
-        mouseSlingController.setGameState(gameState).setPlayerId(Constants.playerOne);
-        view.addMouseListener(mouseSlingController);
+        // MouseSlingController mouseSlingController = new MouseSlingController();
+        // mouseSlingController.setGameState(gameState).setPlayerId(Constants.playerOne);
+        // view.addMouseListener(mouseSlingController);
         waitUntilReady(view);
 
-        SimplePlayerInterface evoAgent = new EvoAgentFactory().getAgent().setVisual();
-        SpinBattleParams falseParams = new SpinBattleParams();
-        falseParams.transitSpeed = 0;
-        falseParams.gravitationalFieldConstant = 0;
-        evoAgent = new FalseModelAdapter().setParams(falseParams).setPlayer(evoAgent);
+        // SimplePlayerInterface evoAgent = new EvoAgentFactory().getAgent().setVisual();
+        // SpinBattleParams falseParams = new SpinBattleParams();
+        // falseParams.transitSpeed = 0;
+        // falseParams.gravitationalFieldConstant = 0;
+        // evoAgent = new FalseModelAdapter().setParams(falseParams).setPlayer(evoAgent);
+
+        SimplePlayerInterface mctsAgent1 = getMCTSAgent(gameState, Constants.playerOne);
+        SimplePlayerInterface mctsAgent2 = getMCTSAgent(gameState, Constants.playerTwo);
+
         int[] actions = new int[2];
 
 
         for (int i=0; i<=5000 && !gameState.isTerminal(); i++) {
-            actions[1] = evoAgent.getAction(gameState.copy(), 1);
+            int action_1 = mctsAgent1.getAction(gameState.copy(), 1);
+            int action_2 = mctsAgent2.getAction(gameState.copy(), 2);
+            System.out.println("P1: " + action_1 + "\tP2: " + action_2);
+            actions[0] = action_1;
             gameState.next(actions);
-            mouseSlingController.update();
+            actions[1] = action_2;
+            gameState.next(actions);
+            // mouseSlingController.update();
             // launcher.makeTransits(gameState, Constants.playerOne);
             view.setGameState((SpinGameState) gameState.copy());
             view.repaint();
@@ -68,5 +81,14 @@ public class HumanSlingVersusEvoAgent {
             // System.out.println(i++ + " : " + CaveView.nPaints);
             Thread.sleep(50);
         }
+    }
+
+    static GVGAIWrapper getMCTSAgent(SpinGameState gameState, int playerId){
+        ElapsedCpuTimer timer = new ElapsedCpuTimer();
+        SpinBattleLinkState linkState = new SpinBattleLinkState(gameState);
+        AbstractMultiPlayer agent = new controllers.multiPlayer.discountOLMCTS.Agent(linkState.copy(), timer, playerId);
+
+        GVGAIWrapper wrapper = new GVGAIWrapper().setAgent(agent);
+        return wrapper;
     }
 }

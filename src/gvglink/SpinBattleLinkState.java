@@ -44,6 +44,7 @@ public class SpinBattleLinkState
     public SpinBattleLinkState(AbstractGameState state) {
         super(null);
         this.state = state;
+        setGvgActions(null);
         // state.setNPlanets(nPlanets).setAlternateOwnerships().setRandomGrowthRates();
     }
 
@@ -68,7 +69,15 @@ public class SpinBattleLinkState
 
         // System.out.println(Arrays.toString(actions));
 
+        // System.out.println("nActions = " + actions.size());
 
+
+        int[] a = new int[]{actions[0].ordinal(), actions[1].ordinal()};
+        state.next(a);
+        nTicks++;
+    }
+
+    public void setGvgActions(Types.ACTIONS[] actions) {
         gvgActions = new ArrayList<>();
 
         int actionLimit = state.nActions();
@@ -80,12 +89,6 @@ public class SpinBattleLinkState
                 gvgActions.add(a);
             }
         }
-        // System.out.println("nActions = " + actions.size());
-
-
-        int[] a = new int[]{actions[0].ordinal(), actions[1].ordinal()};
-        state.next(a);
-        nTicks++;
     }
 
 
