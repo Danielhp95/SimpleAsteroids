@@ -16,6 +16,8 @@ public class Planet {
     public double growthRate;
 
     public double shipCount;
+    public double shipMax;
+
     public int ownedBy;
     SpinBattleParams params;
     Transporter transit;
@@ -28,6 +30,7 @@ public class Planet {
         planet.rotationRate = rotationRate;
         planet.growthRate = growthRate;
         planet.shipCount = shipCount;
+        planet.shipMax = shipMax;
         planet.ownedBy = ownedBy;
         planet.params = params;
         planet.index = index;
@@ -46,10 +49,16 @@ public class Planet {
                 shipCount = Math.abs(shipCount);
                 // and should make a transporter
                 // transit = getTransporter();
+                if (shipCount >= shipMax) {
+                    shipCount = shipMax;
+                }
             }
         } else {
             // must be owned by this player already, so add to the tally
             shipCount += incomingShips;
+            if (shipCount >= shipMax) {
+                shipCount = shipMax;
+            }
         }
         return this;
     }
@@ -58,6 +67,9 @@ public class Planet {
     public Planet update(SpinGameState gameState) {
         if (ownedBy != Constants.neutralPlayer) {
             shipCount += growthRate;
+            if (shipCount >= shipMax) {
+                shipCount = shipMax;
+            }
         }
         if (transit != null && transit.inTransit()) {
             transit.next(gameState.vectorField);
@@ -114,6 +126,11 @@ public class Planet {
         rotationRate = params.spinRatio * (params.getRandom().nextDouble() + 1);
         if (params.getRandom().nextDouble() < 0.5) rotationRate = -rotationRate;
         rotationRate *= Math.PI * 2.0 / 100;
+        return this;
+    }
+
+    public Planet setShipMax() {
+        this.shipMax = this.growthRate * params.shipMaxConst;
         return this;
     }
 

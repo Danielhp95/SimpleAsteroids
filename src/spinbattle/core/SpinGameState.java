@@ -194,6 +194,7 @@ public class SpinGameState implements AbstractGameState {
         Planet planet =new Planet().setParams(params).
                 setRandomLocation(params).setOwnership(Constants.neutralPlayer);
         planet.setRandomGrowthRate();
+        planet.setShipMax();
         planet.setOwnership(owner);
         return planet;
     }
