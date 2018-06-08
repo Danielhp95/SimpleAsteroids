@@ -96,7 +96,7 @@ public class Planet {
     }
 
     public Planet movePlanet(SpinBattleParams p) {
-    	Vector2d adjustPosition = new Vector2d(p.getRandom().nextDouble()*(p.getRandom().nextInt(3)-1), p.getRandom().nextDouble()*(p.getRandom().nextInt(3)-1));
+    	Vector2d adjustPosition = new Vector2d(p.getRandom().nextDouble()*(p.getRandom().nextInt(3)-1)*3, p.getRandom().nextDouble()*(p.getRandom().nextInt(3)-1)*3);
     	position = position.add(adjustPosition);
     	if (position.x >= p.width) {
     		position.x = 1;
