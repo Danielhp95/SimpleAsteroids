@@ -1,7 +1,7 @@
 package caveswing.core;
 
 import math.Vector2d;
-import spinbattle.core.VectorField;
+import teamZero.spinbattle.core.VectorField;
 
 public class MovableObject {
     public Vector2d s;

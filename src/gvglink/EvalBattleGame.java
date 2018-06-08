@@ -1,17 +1,12 @@
 package gvglink;
 
 import battle.BattleGameParameters;
-import battle.BattleView;
 import core.player.AbstractPlayer;
 import evodef.*;
 import ontology.Types;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
-import utilities.ElapsedTimer;
-import utilities.JEasyFrame;
 import utilities.StatSummary;
-
-import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by simonmarklucas on 24/10/2016.
@@ -71,7 +66,7 @@ public class EvalBattleGame implements SolutionEvaluator {
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
         AbstractPlayer player;
 
-        player = new controllers.singlePlayer.discountOLMCTS.Agent(linkState, timer);
+        player = new Agent(linkState, timer);
 
         int thinkingTime = 20; // in milliseconds
         int delay = 30;

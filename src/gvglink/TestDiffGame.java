@@ -7,6 +7,7 @@ import evodef.DefaultMutator;
 import ga.SimpleRMHC;
 import numbergame.DiffGame;
 import ontology.Types;
+import teamZero.spinbattle.controllers.multiPlayer.ea.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
 import utilities.StatSummary;
@@ -71,29 +72,29 @@ public class TestDiffGame {
         int nEvals = 1500;
         // evoAlg = new NTupleBanditEA(kExplore, nNeighbours);
 
-        controllers.multiPlayer.ea.Agent agentEAShift =
-                new controllers.multiPlayer.ea.Agent(stateObs, timer, evoAlg, idPlayer1, nEvals);
+        Agent agentEAShift =
+                new Agent(stateObs, timer, evoAlg, idPlayer1, nEvals);
         agentEAShift.useShiftBuffer = true;
         agentEAShift.sequenceLength = 5;
         player1 = agentEAShift;
 
-        controllers.multiPlayer.ea.Agent agentEANoShift =
-                new controllers.multiPlayer.ea.Agent(stateObs, timer, evoAlg2, idPlayer2, nEvals);
+        Agent agentEANoShift =
+                new Agent(stateObs, timer, evoAlg2, idPlayer2, nEvals);
         agentEANoShift.useShiftBuffer = true;
         agentEANoShift.sequenceLength = 25;
         player2 = agentEANoShift;
 
-        // player2 = new controllers.multiPlayer.discountOLMCTS.Agent(stateObs, timer, idPlayer2);
+        // player2 = new Agent(stateObs, timer, idPlayer2);
 
         // player2 = new controllers.multiPlayer.doNothing.Agent(stateObs, timer, idPlayer2);
 
         // player2 = new controllers.multiPlayer.sampleRandom.Agent(stateObs, timer, idPlayer2);
 
-        // player1  = new controllers.multiPlayer.smlrand.Agent();
+        // player1  = new Agent();
 
         // EvoAlg evoAlg2 = new SimpleRMHC(1);
 
-        // player1 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer1, nEvals / 5);
+        // player1 = new Agent(linkState, timer, evoAlg2, idPlayer1, nEvals / 5);
 
         int thinkingTime = 50; // in milliseconds
         int delay = 10;

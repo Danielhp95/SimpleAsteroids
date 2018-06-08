@@ -3,7 +3,7 @@ package gvglink;
 import core.game.StateObservationMulti;
 import ggi.core.AbstractGameState;
 import ontology.Types;
-import spinbattle.core.SpinGameState;
+import teamZero.spinbattle.core.SpinGameState;
 // import planetwar.GameState;
 
 import java.util.ArrayList;

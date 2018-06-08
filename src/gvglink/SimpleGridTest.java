@@ -1,6 +1,5 @@
 package gvglink;
 
-import controllers.singlePlayer.ea.Agent;
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
 import evodef.EvoAlg;
@@ -9,6 +8,7 @@ import ntuple.NTupleBanditEA;
 import ntuple.SlidingMeanEDA;
 import ontology.Types;
 import rl.grid.GridModel;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
 import utilities.StatSummary;
@@ -49,11 +49,11 @@ public class SimpleGridTest {
         controllers.singlePlayer.sampleOLMCTS.Agent olmcts =
                 new controllers.singlePlayer.sampleOLMCTS.Agent(gridGame, timer);
 
-        controllers.singlePlayer.discountOLMCTS.Agent discountOlmcts =
-                new controllers.singlePlayer.discountOLMCTS.Agent(gridGame, timer);
+        Agent discountOlmcts =
+                new Agent(gridGame, timer);
 
-        controllers.singlePlayer.nestedMC.Agent nestedMC =
-                new controllers.singlePlayer.nestedMC.Agent(gridGame, timer);
+        teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent nestedMC =
+                new teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent(gridGame, timer);
 
 
         player = olmcts;
@@ -75,11 +75,11 @@ public class SimpleGridTest {
 
         // DefaultMutator.totalRandomChaosMutation = false;
 
-        Agent.useShiftBuffer = true;
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.useShiftBuffer = true;
 
-        Agent.SEQUENCE_LENGTH = 30;
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.SEQUENCE_LENGTH = 30;
 
-        player = new Agent(gridGame, timer, evoAlg, nEvals);
+        player = new teamZero.spinbattle.controllers.singlePlayer.ea.Agent(gridGame, timer, evoAlg, nEvals);
 
         nestedMC.maxRolloutLength = 30;
         nestedMC.nestDepth = 3;

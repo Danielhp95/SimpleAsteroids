@@ -1,7 +1,8 @@
 package gvglink;
 
 import asteroids.View;
-import controllers.singlePlayer.discountOLMCTS.SingleTreeNode;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.SingleTreeNode;
 import core.player.AbstractPlayer;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
@@ -39,7 +40,7 @@ public class AsteroidsSimpleTest {
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
 
         AbstractPlayer player =
-                new controllers.singlePlayer.discountOLMCTS.Agent(stateObs, timer);
+                new Agent(stateObs, timer);
 
         int depth = 100;
         int ticks = 2000;
@@ -47,7 +48,7 @@ public class AsteroidsSimpleTest {
         SingleTreeNode.scoreDiscountFactor = 0.999;
         SingleTreeNode.useScoreDiscount = true;
         SingleTreeNode.DEFAULT_ROLLOUT_DEPTH = depth;
-        controllers.singlePlayer.discountOLMCTS.Agent.MCTS_ITERATIONS = ticks / depth;
+        Agent.MCTS_ITERATIONS = ticks / depth;
 
         int thinkingTime = 10; // in milliseconds
         int delay = 20;

@@ -1,6 +1,5 @@
 package gvglink;
 
-import controllers.multiPlayer.ea.Agent;
 import core.player.AbstractMultiPlayer;
 import evodef.EvoAlg;
 import evodef.GameActionSpaceAdapterMulti;
@@ -8,9 +7,9 @@ import ga.SimpleRMHC;
 import ontology.Types;
 import planetwar.GameState;
 import planetwar.PlanetWarView;
+import teamZero.spinbattle.controllers.multiPlayer.treeReusageDiscountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
-import utilities.JEasyFrame;
 import utilities.StatSummary;
 
 import java.util.Random;
@@ -73,7 +72,7 @@ public class PlanetWarsLinkTest {
 
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
 
-        player2 = new controllers.multiPlayer.discountOLMCTS.Agent(state.copy(), timer, idPlayer2);
+        player2 = new Agent(state.copy(), timer, idPlayer2);
         // player2 = new controllers.multiPlayer.sampleOLMCTS.Agent(state.copy(), timer, idPlayer2);
 
         // try the evolutionary players
@@ -85,21 +84,21 @@ public class PlanetWarsLinkTest {
         // evoAlg = new SlidingMeanEDA().setHistoryLength(20);
 
 
-        Agent evoAgent = new controllers.multiPlayer.ea.Agent(state.copy(), timer, evoAlg, idPlayer1, nEvals);
+        teamZero.spinbattle.controllers.multiPlayer.ea.Agent evoAgent = new teamZero.spinbattle.controllers.multiPlayer.ea.Agent(state.copy(), timer, evoAlg, idPlayer1, nEvals);
         evoAgent.sequenceLength = 15;
         evoAgent.setUseShiftBuffer(true);
         player1 = evoAgent;
 
-        // player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
-        // player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
+        // player2 = new Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
+        // player2 = new Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
 
-        // player1 = new controllers.multiPlayer.smlrand.Agent();
-        // player2 = new controllers.multiPlayer.smlrand.Agent();
+        // player1 = new Agent();
+        // player2 = new Agent();
         // player2 = new controllers.multiPlayer.doNothing.Agent(state, timer, 1);
 
         // EvoAlg evoAlg2 = new SimpleRMHC(2);
 
-        // player1 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
+        // player1 = new Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
 
 
         // player1 =

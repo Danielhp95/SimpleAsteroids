@@ -4,7 +4,6 @@ import altgame.SimpleMaxGame;
 import battle.BattleGameParameters;
 import battle.BattleView;
 import battle.SampleEvolvedParams;
-import controllers.singlePlayer.ea.Agent;
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
 import evodef.EvoAlg;
@@ -12,6 +11,7 @@ import evodef.GameActionSpaceAdapter;
 import ga.SimpleRMHC;
 import ntuple.NTupleBanditEA;
 import ontology.Types;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
 import utilities.JEasyFrame;
@@ -64,7 +64,7 @@ public class SpaceBattleLinkTest {
 
         // set some parameters for the experiment
         GameActionSpaceAdapter.useHeuristic = false;
-        Agent.useShiftBuffer = true;
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.useShiftBuffer = true;
         // DefaultMutator.totalRandomChaosMutation = false;
 
 
@@ -79,7 +79,7 @@ public class SpaceBattleLinkTest {
 //        controllers.singlePlayer.sampleOLMCTS.Agent olmcts =
 //                new controllers.singlePlayer.sampleOLMCTS.Agent(linkState, timer);
 
-        player = new controllers.singlePlayer.discountOLMCTS.Agent(linkState, timer);
+        player = new Agent(linkState, timer);
 
 
         // try the evolutionary players
@@ -94,10 +94,10 @@ public class SpaceBattleLinkTest {
         int nEvals = 200;
         evoAlg = new NTupleBanditEA(kExplore, nNeighbours);
 
-        // player = new controllers.singlePlayer.ea.Agent(linkState, timer, evoAlg, nEvals);
+        // player = new Agent(linkState, timer, evoAlg, nEvals);
 
-        controllers.singlePlayer.nestedMC.Agent nestedMC =
-                new controllers.singlePlayer.nestedMC.Agent(linkState, timer);
+        teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent nestedMC =
+                new teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent(linkState, timer);
 
         nestedMC.maxRolloutLength = 10;
         nestedMC.nestDepth = 2;

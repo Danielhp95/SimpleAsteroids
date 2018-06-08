@@ -4,7 +4,7 @@ package gvglink;
  * Created by sml on 14/10/2016.
  */
 
-import controllers.singlePlayer.ea.Agent;
+import teamZero.spinbattle.controllers.singlePlayer.ea.Agent;
 import core.ArcadeMachine;
 import core.competition.CompetitionParameters;
 import evodef.EvoAlg;
@@ -41,7 +41,7 @@ public class Test
         String sampleGAController = "controllers.singlePlayer.sampleGA.Agent";
         String sampleOLETSController = "controllers.singlePlayer.olets.Agent";
         String repeatOLETS = "controllers.singlePlayer.repeatOLETS.Agent";
-        String slidingEA = "controllers.singlePlayer.ea.Agent";
+        String slidingEA = "Agent";
 
 
 

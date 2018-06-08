@@ -11,6 +11,7 @@ import ntuple.CompactSlidingModelGA;
 import ntuple.NTupleBanditEA;
 import ntuple.SlidingMeanEDA;
 import ontology.Types;
+import teamZero.spinbattle.controllers.multiPlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
 import utilities.JEasyFrame;
@@ -88,7 +89,7 @@ public class SpaceBattleLinkTestTwoPlayer {
         int idPlayer1 = 0;
         int idPlayer2 = 1;
 
-        player2 = new controllers.multiPlayer.discountOLMCTS.Agent(linkState, timer, idPlayer2);
+        player2 = new Agent(linkState, timer, idPlayer2);
 
         // try the evolutionary players
 
@@ -107,15 +108,15 @@ public class SpaceBattleLinkTestTwoPlayer {
         EvoAlg evoAlg2 = new CompactSlidingModelGA().setHistoryLength(2);
 
 
-        player1 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg, idPlayer1, nEvals);
-        // player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
-        // player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
+        player1 = new teamZero.spinbattle.controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg, idPlayer1, nEvals);
+        // player2 = new Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
+        // player2 = new Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
 
-        // player1  = new controllers.multiPlayer.smlrand.Agent();
+        // player1  = new Agent();
 
         // EvoAlg evoAlg2 = new SimpleRMHC(2);
 
-        // player1 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
+        // player1 = new Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
 
 
         int thinkingTime = 50; // in milliseconds

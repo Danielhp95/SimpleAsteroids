@@ -4,8 +4,8 @@ import core.player.AbstractMultiPlayer;
 import evodef.EvoAlg;
 import ga.SimpleRMHC;
 import ontology.Types;
+import teamZero.spinbattle.controllers.multiPlayer.ea.Agent;
 import tools.ElapsedCpuTimer;
-import utilities.ElapsedTimer;
 import utilities.JEasyFrame;
 
 /**
@@ -44,18 +44,18 @@ public class DiffGameViewTest {
         int nEvals = 15000;
         // evoAlg = new NTupleBanditEA(kExplore, nNeighbours);
 
-        controllers.multiPlayer.ea.Agent agentEAShift =
-                new controllers.multiPlayer.ea.Agent(dg, timer, evoAlg, idPlayer1, nEvals);
+        Agent agentEAShift =
+                new Agent(dg, timer, evoAlg, idPlayer1, nEvals);
         agentEAShift.useShiftBuffer = true;
         agentEAShift.sequenceLength = 10;
 
         player1 = agentEAShift;
 
-        // player2 = new controllers.multiPlayer.discountOLMCTS.Agent(dg, timer, idPlayer2);
+        // player2 = new Agent(dg, timer, idPlayer2);
         // player2 = new controllers.multiPlayer.sampleOLMCTS.Agent(dg, timer, idPlayer2);
 
-        controllers.multiPlayer.ea.Agent agentEANoShift =
-                new controllers.multiPlayer.ea.Agent(dg, timer, evoAlg2, idPlayer1, nEvals);
+        Agent agentEANoShift =
+                new Agent(dg, timer, evoAlg2, idPlayer1, nEvals);
         agentEANoShift.useShiftBuffer = true;
         agentEANoShift.sequenceLength = 10;
         player1 = agentEANoShift;

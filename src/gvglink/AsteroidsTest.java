@@ -1,8 +1,8 @@
 package gvglink;
 
 import asteroids.View;
-import controllers.singlePlayer.discountOLMCTS.SingleTreeNode;
-import controllers.singlePlayer.ea.Agent;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.SingleTreeNode;
 import core.player.AbstractPlayer;
 import evodef.EvoAlg;
 import evodef.DefaultMutator;
@@ -60,21 +60,21 @@ public class AsteroidsTest {
         controllers.singlePlayer.sampleOLMCTS.Agent olmcts =
                 new controllers.singlePlayer.sampleOLMCTS.Agent(stateObs, timer);
 
-        controllers.singlePlayer.discountOLMCTS.Agent discountOlmcts =
-                new controllers.singlePlayer.discountOLMCTS.Agent(stateObs, timer);
+        Agent discountOlmcts =
+                new Agent(stateObs, timer);
 
-        controllers.singlePlayer.nestedMC.Agent nestedMC =
-                new controllers.singlePlayer.nestedMC.Agent(stateObs, timer);
+        teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent nestedMC =
+                new teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent(stateObs, timer);
 
 
         int depth = 100;
 
         int ticks = 2000;
-        controllers.singlePlayer.discountOLMCTS.SingleTreeNode.DEFAULT_ROLLOUT_DEPTH = depth;
+        SingleTreeNode.DEFAULT_ROLLOUT_DEPTH = depth;
         SingleTreeNode.scoreDiscountFactor = 0.999;
         SingleTreeNode.useScoreDiscount = true;
-        controllers.singlePlayer.discountOLMCTS.SingleTreeNode.DEFAULT_ROLLOUT_DEPTH = depth;
-        controllers.singlePlayer.discountOLMCTS.Agent.MCTS_ITERATIONS = ticks / depth;
+        SingleTreeNode.DEFAULT_ROLLOUT_DEPTH = depth;
+        Agent.MCTS_ITERATIONS = ticks / depth;
 
 
 
@@ -95,11 +95,11 @@ public class AsteroidsTest {
 
         DefaultMutator.totalRandomChaosMutation = true;
 
-        Agent.useShiftBuffer = true;
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.useShiftBuffer = true;
 
-        controllers.singlePlayer.ea.Agent.SEQUENCE_LENGTH = ticks / nEvals;
-        player = new controllers.singlePlayer.ea.Agent(stateObs, timer, evoAlg, nEvals);
-        // player = new controllers.singlePlayer.ea.Agent(stateObs, timer);
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.SEQUENCE_LENGTH = ticks / nEvals;
+        player = new teamZero.spinbattle.controllers.singlePlayer.ea.Agent(stateObs, timer, evoAlg, nEvals);
+        // player = new Agent(stateObs, timer);
 
 
 //        nestedMC.maxRolloutLength = 5;

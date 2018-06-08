@@ -1,13 +1,13 @@
 package gvglink;
 
 import altgame.SimpleMaxGame;
-import controllers.singlePlayer.ea.Agent;
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
 import evodef.EvoAlg;
 import ga.SimpleRMHC;
 import ntuple.NTupleBanditEA;
 import ontology.Types;
+import teamZero.spinbattle.controllers.singlePlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 import utilities.ElapsedTimer;
 import utilities.StatSummary;
@@ -49,11 +49,11 @@ public class SimpleMaxNTest {
         controllers.singlePlayer.sampleOLMCTS.Agent olmcts =
                 new controllers.singlePlayer.sampleOLMCTS.Agent(stateObs, timer);
 
-        controllers.singlePlayer.discountOLMCTS.Agent discountOlmcts =
-                new controllers.singlePlayer.discountOLMCTS.Agent(stateObs, timer);
+        Agent discountOlmcts =
+                new Agent(stateObs, timer);
 
-        controllers.singlePlayer.nestedMC.Agent nestedMC =
-                new controllers.singlePlayer.nestedMC.Agent(stateObs, timer);
+        teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent nestedMC =
+                new teamZero.spinbattle.controllers.singlePlayer.nestedMC.Agent(stateObs, timer);
 
 
 
@@ -75,10 +75,10 @@ public class SimpleMaxNTest {
 
         // DefaultMutator.totalRandomChaosMutation = true;
 
-        Agent.useShiftBuffer = false;
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.useShiftBuffer = false;
 
-        controllers.singlePlayer.ea.Agent.SEQUENCE_LENGTH = 100;
-        player = new controllers.singlePlayer.ea.Agent(stateObs, timer, evoAlg, nEvals);
+        teamZero.spinbattle.controllers.singlePlayer.ea.Agent.SEQUENCE_LENGTH = 100;
+        player = new teamZero.spinbattle.controllers.singlePlayer.ea.Agent(stateObs, timer, evoAlg, nEvals);
 
 
         nestedMC.maxRolloutLength = 5;

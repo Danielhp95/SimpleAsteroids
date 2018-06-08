@@ -1,16 +1,7 @@
 package gvglink;
 
-import controllers.multiPlayer.ea.Agent;
-import core.player.AbstractMultiPlayer;
-import evodef.EvoAlg;
-import evodef.GameActionSpaceAdapter;
-import ga.SimpleRMHC;
 import ontology.Types;
 import planetwar.GameState;
-import planetwar.PlanetWarView;
-import tools.ElapsedCpuTimer;
-
-import java.util.Random;
 
 public class PlanetWarsLinkStateDebug {
 

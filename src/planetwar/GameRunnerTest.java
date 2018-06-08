@@ -11,6 +11,7 @@ import ggi.core.GameRunnerTwoPlayer;
 import ggi.core.SimplePlayerInterface;
 import gvglink.PlanetWarsLinkState;
 import ntuple.SlidingMeanEDA;
+import teamZero.spinbattle.controllers.multiPlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 
 public class GameRunnerTest {
@@ -88,7 +89,7 @@ public class GameRunnerTest {
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
         PlanetWarsLinkState linkState = new PlanetWarsLinkState(gameState);
         AbstractMultiPlayer agent =
-                new controllers.multiPlayer.discountOLMCTS.Agent(linkState.copy(), timer, playerId);
+                new Agent(linkState.copy(), timer, playerId);
         GVGAIWrapper wrapper = new GVGAIWrapper().setAgent(agent);
         return wrapper;
 

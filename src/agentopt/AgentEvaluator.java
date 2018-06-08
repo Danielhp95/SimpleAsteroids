@@ -1,13 +1,11 @@
 package agentopt;
 
 import battle.BattleGameParameters;
-import controllers.multiPlayer.ea.Agent;
+import teamZero.spinbattle.controllers.multiPlayer.ea.Agent;
 import core.game.StateObservationMulti;
-import core.player.AbstractMultiPlayer;
 import evodef.*;
 import ga.SimpleRMHC;
 import gvglink.SpaceBattleLinkStateTwoPlayer;
-import ntuple.CompactSlidingModelGA;
 import ntuple.NTupleBanditEA;
 import ntuple.SlidingMeanEDA;
 import ontology.Types;
@@ -86,7 +84,7 @@ public class AgentEvaluator implements NoisySolutionEvaluator {
         int idPlayer1 = 0;
         int idPlayer2 = 1;
 
-        // player2 = new controllers.multiPlayer.discountOLMCTS.Agent(linkState, timer, idPlayer2);
+        // player2 = new Agent(linkState, timer, idPlayer2);
 
         // try the evolutionary players
 
@@ -102,7 +100,7 @@ public class AgentEvaluator implements NoisySolutionEvaluator {
 
         evoAlg = new SlidingMeanEDA().setHistoryLength(searchSpace.getHistoryLength(solution));
 
-        Agent evoAgent = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg, idPlayer1, nEvals);
+        Agent evoAgent = new Agent(linkState, timer, evoAlg, idPlayer1, nEvals);
         evoAgent.setDiscountFactor(searchSpace.getDiscountFactor(solution));
 
         evoAgent.sequenceLength = searchSpace.getRolloutLength(solution);
@@ -111,17 +109,17 @@ public class AgentEvaluator implements NoisySolutionEvaluator {
 
         // EvoAlg evoAlg2 = new CompactSlidingModelGA().setHistoryLength(2);
         EvoAlg evoAlg2 = new SlidingMeanEDA().setHistoryLength(2);
-        Agent player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
+        Agent player2 = new Agent(linkState, timer, evoAlg2, idPlayer2, nEvals);
         player2.sequenceLength = 5;
 
 
-        // player2 = new controllers.multiPlayer.ea.Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
+        // player2 = new Agent(linkState, timer, new SimpleRMHC(nResamples), idPlayer2, nEvals);
 
-        // player1  = new controllers.multiPlayer.smlrand.Agent();
+        // player1  = new Agent();
 
         // EvoAlg evoAlg2 = new SimpleRMHC(2);
 
-        // player1 = new controllers.multiPlayer.ea.Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
+        // player1 = new Agent(linkState, timer, evoAlg2, idPlayer1, nEvals);
 
 
         int thinkingTime = 10; // in milliseconds

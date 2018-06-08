@@ -10,7 +10,7 @@ import ggi.core.SimplePlayerInterface;
 import plot.NullPlayoutPlotter;
 import plot.PlayoutPlotter;
 import plot.PlayoutPlotterInterface;
-import spinbattle.core.SpinGameState;
+import teamZero.spinbattle.core.SpinGameState;
 
 import java.awt.*;
 

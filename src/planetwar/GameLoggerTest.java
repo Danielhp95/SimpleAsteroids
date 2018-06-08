@@ -68,7 +68,7 @@ public class GameLoggerTest {
 //        ElapsedCpuTimer timer = new ElapsedCpuTimer();
 //        PlanetWarsLinkState linkState = new PlanetWarsLinkState(gameState);
 //        AbstractMultiPlayer agent =
-//                new controllers.multiPlayer.discountOLMCTS.Agent(linkState.copy(), timer, ownedBy);
+//                new Agent(linkState.copy(), timer, ownedBy);
 //        GVGAIWrapper wrapper = new GVGAIWrapper().setAgent(agent);
 //        return wrapper;
 //
