@@ -18,6 +18,8 @@ public class Planet {
     public double shipCount;
     public double shipMax;
 
+    private Vector2d moveDirection;
+
     public int ownedBy;
     SpinBattleParams params;
     Transporter transit;
@@ -34,6 +36,7 @@ public class Planet {
         planet.ownedBy = ownedBy;
         planet.params = params;
         planet.index = index;
+        planet.moveDirection = moveDirection;
         if (transit !=  null)
             planet.transit = transit.copy();
         return planet;
@@ -91,12 +94,14 @@ public class Planet {
             }
         }
         rotation += rotationRate;
-        //movePlanet(params); //@moveplanets
+        movePlanet(params); //@moveplanets
         return this;
     }
 
     public Planet movePlanet(SpinBattleParams p) {
-    	Vector2d adjustPosition = new Vector2d(p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1), p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1));
+        Vector2d adjustPosition = new Vector2d(moveDirection.x, moveDirection.y);
+        adjustPosition.x /= 5000;
+        adjustPosition.y /= 5000;
     	position = position.add(adjustPosition);
     	if (position.x >= p.width) {
     		position.x = 1;
@@ -112,7 +117,11 @@ public class Planet {
     	}
     	return this;
     }
-    
+
+    public Planet setMoveDirection(Vector2d moveDirection) {
+        this.moveDirection = moveDirection;
+        return this;
+    }
     
     public Planet setParams(SpinBattleParams params) {
         this.params = params;

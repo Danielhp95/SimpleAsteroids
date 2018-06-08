@@ -40,7 +40,7 @@ public class SpinBattleParams {
     public int minInitialShips = 5;
     public int maxInitialShips = 20;
     public int shipMaxConst = 1000;
-    public double transitSpeed = 3;
+    public double transitSpeed = 12;
 
     // this is for a heuristic AI opponent
     public int releasePeriod = 400;

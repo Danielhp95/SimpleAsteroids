@@ -67,7 +67,6 @@ public class SingleTreeNode
         // while(remaining > 2*avgTimeTaken && remaining > remainingLimit){
         int nIterations = 50;
         while(numIters < nIterations){
-            System.out.println("Is state null? " + rootState == null);
             StateObservationMulti state = rootState.copy();
 
             ElapsedCpuTimer elapsedTimerIteration = new ElapsedCpuTimer();

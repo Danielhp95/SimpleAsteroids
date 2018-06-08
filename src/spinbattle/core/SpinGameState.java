@@ -2,6 +2,7 @@ package spinbattle.core;
 
 import ggi.core.AbstractGameState;
 import logger.sample.DefaultLogger;
+import math.Vector2d;
 import spinbattle.actuator.Actuator;
 import spinbattle.params.Constants;
 import spinbattle.params.SpinBattleParams;
@@ -56,9 +57,9 @@ public class SpinGameState implements AbstractGameState {
         }
         // shallow copy the proximity map (which may even be null)
         copy.proximityMap = proximityMap;
-        //proximityMap = new ProximityMap().setPlanets(this); //@moveplanet
+        proximityMap = new ProximityMap().setPlanets(this); //@moveplanet
         copy.vectorField = vectorField;
-        //vectorField = new VectorField().setParams(params).setField(this); //@moveplanet
+        vectorField = new VectorField().setParams(params).setField(this); //@moveplanet
 
         // do NOT copy the logger - this is only used in the "real" game by default
         return copy;
@@ -201,6 +202,8 @@ public class SpinGameState implements AbstractGameState {
                 setRandomLocation(params).setOwnership(Constants.neutralPlayer);
         planet.setRandomGrowthRate();
         planet.setShipMax();
+        Vector2d adjustPosition = new Vector2d(params.getRandom().nextDouble()*(params.getRandom().nextInt(3)-1)*3, params.getRandom().nextDouble()*(params.getRandom().nextInt(3)-1)*3);
+        planet.setMoveDirection(adjustPosition);
         planet.setOwnership(owner);
         return planet;
     }
