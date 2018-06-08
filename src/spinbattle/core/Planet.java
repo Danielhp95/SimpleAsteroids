@@ -91,7 +91,7 @@ public class Planet {
             }
         }
         rotation += rotationRate;
-        //movePlanet(params); //@moveplanets
+        movePlanet(params); //@moveplanets
         return this;
     }
 
