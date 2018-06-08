@@ -53,7 +53,7 @@ public class HumanSlingVersusEvoAgent {
         // evoAgent = new FalseModelAdapter().setParams(falseParams).setPlayer(evoAgent);
 
         SimplePlayerInterface mctsAgent1 = getMCTSAgent(gameState, Constants.playerOne, false);
-        SimplePlayerInterface mctsAgent2 =  getMCTSAgent(gameState, Constants.playerOne, true);
+        SimplePlayerInterface mctsAgent2 =  getMCTSAgent(gameState, Constants.playerTwo, false);
 
         int[] actions = new int[2];
 

@@ -56,9 +56,9 @@ public class SingleMCTSPlayerTreeReusage
 
         if (m_root == null || elapsed_ticks_since_tree_refresh % 1000 == 0) {
             m_root = new SingleTreeNode(m_rnd, NUM_ACTIONS, actions, id, oppID, no_players);
-            m_root.rootState = a_gameState;
             this.elapsed_ticks_since_tree_refresh = 0;
         }
+        m_root.rootState = a_gameState;
     }
 
     /**
