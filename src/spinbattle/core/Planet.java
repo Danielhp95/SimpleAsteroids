@@ -91,11 +91,11 @@ public class Planet {
             }
         }
         rotation += rotationRate;
-        //movePlanet(params);
+        //movePlanet(params); //@moveplanets
         return this;
     }
 
-    /*public Planet movePlanet(SpinBattleParams p) {
+    public Planet movePlanet(SpinBattleParams p) {
     	Vector2d adjustPosition = new Vector2d(p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1), p.getRandom().nextDouble()*(p.getRandom().nextInt(2)-1));
     	position = position.add(adjustPosition);
     	if (position.x >= p.width) {
@@ -111,7 +111,7 @@ public class Planet {
     		position.y = p.height - 1;
     	}
     	return this;
-    }*/
+    }
     
     
     public Planet setParams(SpinBattleParams params) {
