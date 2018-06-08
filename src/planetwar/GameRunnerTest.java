@@ -11,6 +11,7 @@ import ggi.core.GameRunnerTwoPlayer;
 import ggi.core.SimplePlayerInterface;
 import gvglink.PlanetWarsLinkState;
 import ntuple.SlidingMeanEDA;
+import teamZero.spinbattle.GVGAIWrapper;
 import teamZero.spinbattle.controllers.multiPlayer.discountOLMCTS.Agent;
 import tools.ElapsedCpuTimer;
 

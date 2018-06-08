@@ -1,4 +1,4 @@
-package planetwar;
+package teamZero.spinbattle;
 
 import core.player.AbstractMultiPlayer;
 import ggi.core.AbstractGameState;
@@ -6,6 +6,7 @@ import ggi.core.SimplePlayerInterface;
 import gvglink.PlanetWarsLinkState;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
+import teamZero.spinbattle.controllers.multiPlayer.treeReusageDiscountOLMCTS.Agent;
 
 public class GVGAIWrapper implements SimplePlayerInterface {
 
@@ -25,8 +26,11 @@ public class GVGAIWrapper implements SimplePlayerInterface {
 
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
         timer.setMaxTimeMillis(thinkingTime);
+        Agent a = (Agent) this.agent;
+        a.id = playerId;
+        a.oppID = (a.id + 1) % 2;
 
-        Types.ACTIONS actions = agent.act(linkState, timer);
+        Types.ACTIONS actions = a.act(linkState, timer);
         return actions.ordinal();
     }
 

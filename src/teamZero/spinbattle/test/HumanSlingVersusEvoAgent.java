@@ -4,7 +4,7 @@ import teamZero.spinbattle.controllers.multiPlayer.treeReusageDiscountOLMCTS.Age
 import core.player.AbstractMultiPlayer;
 import ggi.core.SimplePlayerInterface;
 import gvglink.SpinBattleLinkState;
-import planetwar.GVGAIWrapper;
+import teamZero.spinbattle.GVGAIWrapper;
 import teamZero.spinbattle.actuator.SourceTargetActuator;
 import teamZero.spinbattle.core.SpinGameState;
 import teamZero.spinbattle.log.BasicLogger;

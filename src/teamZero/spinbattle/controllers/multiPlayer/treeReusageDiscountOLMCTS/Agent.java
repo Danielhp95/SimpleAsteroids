@@ -20,6 +20,7 @@ public class Agent extends AbstractMultiPlayer {
     public int[] NUM_ACTIONS;
     public Types.ACTIONS[][] actions;
     public int id, oppID, no_players;
+    private boolean initialized = false;
 
     protected SingleMCTSPlayerTreeReusage mctsPlayer;
 
@@ -28,13 +29,14 @@ public class Agent extends AbstractMultiPlayer {
      * @param so state observation of the current game.
      * @param elapsedTimer Timer for the controller creation.
      */
-    public Agent(StateObservationMulti so, ElapsedCpuTimer elapsedTimer, int playerID)
+    public Agent()
     {
+    }
+
+    public void init(StateObservationMulti so, ElapsedCpuTimer elapsedTimer) {
         //get game information
 
-        no_players = so.getNoPlayers();
-        id = playerID;
-        oppID = (id + 1) % so.getNoPlayers();
+        this.no_players = 2;
 
         //Get the actions for all players in a static array.
 
@@ -52,6 +54,13 @@ public class Agent extends AbstractMultiPlayer {
         }
         //Create the player.
         mctsPlayer = getPlayer(so, elapsedTimer, NUM_ACTIONS, actions, id, oppID, no_players);
+        this.initialized = true;
+
+    }
+
+    public Agent withPlayerId(int playerID) {
+        this.id = playerID;
+        return this;
     }
 
     public SingleMCTSPlayerTreeReusage getPlayer(StateObservationMulti so, ElapsedCpuTimer elapsedTimer, int[] NUM_ACTIONS, Types.ACTIONS[][] actions, int id, int oppID, int no_players) {
@@ -67,6 +76,10 @@ public class Agent extends AbstractMultiPlayer {
      * @return An action for the current state
      */
     public Types.ACTIONS act(StateObservationMulti stateObs, ElapsedCpuTimer elapsedTimer) {
+
+        if (!this.initialized) {
+           this.init(stateObs, elapsedTimer); 
+        }
 
         //Set the state observation object as the new root of the tree.
         mctsPlayer.init(stateObs);
