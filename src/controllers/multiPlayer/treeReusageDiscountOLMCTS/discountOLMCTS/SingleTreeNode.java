@@ -1,11 +1,10 @@
-package controllers.multiPlayer.discountOLMCTS;
+package controllers.multiPlayer.treeReusageDiscountOLMCTS.discountOLMCTS;
 
 import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class SingleTreeNode
@@ -68,7 +67,7 @@ public class SingleTreeNode
         // while(remaining > 2*avgTimeTaken && remaining > remainingLimit){
         int nIterations = 50;
         while(numIters < nIterations){
-
+            System.out.println("Is state null? " + rootState == null);
             StateObservationMulti state = rootState.copy();
 
             ElapsedCpuTimer elapsedTimerIteration = new ElapsedCpuTimer();

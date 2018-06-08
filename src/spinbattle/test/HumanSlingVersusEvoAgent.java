@@ -1,5 +1,6 @@
 package spinbattle.test;
 
+import agents.dummy.RandomAgent;
 import agents.evo.EvoAgent;
 import core.player.AbstractMultiPlayer;
 import ggi.agents.EvoAgentFactory;
@@ -35,7 +36,7 @@ public class HumanSlingVersusEvoAgent {
         gameState.actuators[0] = new SourceTargetActuator().setPlayerId(0);
         gameState.actuators[1] = new SourceTargetActuator().setPlayerId(1);
         BasicLogger basicLogger = new BasicLogger();
-        gameState.setLogger(new DefaultLogger());
+        // gameState.setLogger(new DefaultLogger());
         SpinBattleView view = new SpinBattleView().setParams(params).setGameState(gameState);
         String title = "Spin Battle Game" ;
         JEasyFrame frame = new JEasyFrame(view, title + ": Waiting for Graphics");
@@ -51,8 +52,8 @@ public class HumanSlingVersusEvoAgent {
         // falseParams.gravitationalFieldConstant = 0;
         // evoAgent = new FalseModelAdapter().setParams(falseParams).setPlayer(evoAgent);
 
-        SimplePlayerInterface mctsAgent1 = getMCTSAgent(gameState, Constants.playerOne);
-        SimplePlayerInterface mctsAgent2 = getMCTSAgent(gameState, Constants.playerTwo);
+        SimplePlayerInterface mctsAgent1 = getMCTSAgent(gameState, Constants.playerOne, false);
+        SimplePlayerInterface mctsAgent2 =  getMCTSAgent(gameState, Constants.playerOne, true);
 
         int[] actions = new int[2];
 
@@ -82,10 +83,15 @@ public class HumanSlingVersusEvoAgent {
         }
     }
 
-    static GVGAIWrapper getMCTSAgent(SpinGameState gameState, int playerId){
+    static GVGAIWrapper getMCTSAgent(SpinGameState gameState, int playerId, boolean reuseTree){
         ElapsedCpuTimer timer = new ElapsedCpuTimer();
         SpinBattleLinkState linkState = new SpinBattleLinkState(gameState);
-        AbstractMultiPlayer agent = new controllers.multiPlayer.discountOLMCTS.Agent(linkState.copy(), timer, playerId);
+        AbstractMultiPlayer agent;
+        if (reuseTree) {
+            agent = new controllers.multiPlayer.treeReusageDiscountOLMCTS.discountOLMCTS.Agent(linkState.copy(), timer, playerId);
+        } else {
+            agent = new controllers.multiPlayer.discountOLMCTS.Agent(linkState.copy(), timer, playerId);
+        }
 
         GVGAIWrapper wrapper = new GVGAIWrapper().setAgent(agent);
         return wrapper;
