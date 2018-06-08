@@ -20,9 +20,13 @@ public class ProximityMap {
             int rad = p.getRadius();
             for (int x = (int) p.position.x -rad; x <= (int) p.position.x + rad; x++) {
                 for (int y = (int) p.position.y - rad; y <= (int) p.position.y + rad; y++) {
-                    if (new Vector2d(x, y).dist(p.position) <= rad) {
-                        inRange[x][y] = p.index;
-                    }
+                	try {
+	                    if (new Vector2d(x, y).dist(p.position) <= rad) {
+	                        inRange[x][y] = p.index;
+	                    }
+                	} catch (Exception e) {
+                		
+                	}
                 }
             }
         }

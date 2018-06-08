@@ -56,7 +56,9 @@ public class SpinGameState implements AbstractGameState {
         }
         // shallow copy the proximity map (which may even be null)
         copy.proximityMap = proximityMap;
+        //proximityMap = new ProximityMap().setPlanets(this); //@moveplanet
         copy.vectorField = vectorField;
+        //vectorField = new VectorField().setParams(params).setField(this); //@moveplanet
 
         // do NOT copy the logger - this is only used in the "real" game by default
         return copy;

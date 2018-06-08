@@ -1,6 +1,7 @@
 package spinbattle.test;
 
 import ggi.core.SimplePlayerInterface;
+import spinbattle.core.ProximityMap;
 import spinbattle.core.SpinGameState;
 import spinbattle.params.Constants;
 import spinbattle.params.SpinBattleParams;
